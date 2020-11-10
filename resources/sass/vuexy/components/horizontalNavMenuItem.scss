@@ -1,0 +1,67 @@
+@import '../_variables.scss';
+
+// If items is inside drop-down
+.menu-item {
+  li {
+    .h-nav-menu-item {
+
+      a {
+        padding: .75rem 1.5rem;
+      }
+
+      & > * {
+        transition: .25s ease-in-out;
+
+        &:hover {
+          transform: translateX(5px)
+        }
+      }
+
+
+      &.h-nav-active-item {
+        background-color: #f6f6f6;
+
+        .theme-dark & {
+          background-color: $theme-dark-bg;
+        }
+      }
+    }
+
+  }
+}
+
+// If items is as nav-header
+.menu-link {
+  .h-nav-menu-item {
+
+    &:hover {
+        border-bottom: 3px solid rgba(var(--vs-primary), 0.6);
+        a {
+            color: #414141;
+        }
+        .nav-link {
+
+            .theme-dark & {
+            background: $theme-light-dark-bg;
+            }
+        }
+    }
+
+    &.h-nav-active-item {
+        border-bottom: 3px solid rgba(var(--vs-primary), 0.6);
+        a {
+            font-family: "Montserrat", Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            background: white;
+            color: #414141;
+        }
+    }
+
+    a {
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        background: white;
+        color: #9a9a9a;
+    }
+  }
+}

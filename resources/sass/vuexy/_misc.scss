@@ -1,0 +1,273 @@
+/*=========================================================================================
+    File Name: _misc.scss
+    Description: partial- misc styles
+    ----------------------------------------------------------------------------------------
+    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+      Author: Pixinvent
+    Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+body {
+    .mx-datepicker-popup {
+        z-index: 99999 !important;
+    }
+}
+
+code {
+  font-family: $font-family-sans-serif;
+  background: #eee;
+  padding: 0.1rem .3rem;
+  border-radius: 3px;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.layout--full-page {
+  .bg-img {
+    background-image: url("../images/pages/vuexy-login-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .full-page-bg-color {
+    background-color: #f7f7f9;
+  }
+
+  .group-img-top-right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 35%;
+  }
+
+  .group-img-bottom-left {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    width: 35%;
+  }
+
+  .position-relative {
+      position: relative;
+  }
+
+  .head-text {
+    font-weight: bold;
+    color: white;
+    font-size: 32px;
+  }
+
+  .sub-text {
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.btn-block {
+    width: 100%;;
+}
+
+.main-color {
+    color: #f8be0b !important;
+}
+
+.custom-default-button {
+    color: #e6a500;
+    background: white;
+    border-radius: 30px;
+}
+
+.custom-filled-button {
+    color: white;
+    background: linear-gradient(to right, #f0be46 , #f8b003);
+    border-radius: 30px;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vertical-centered {
+    position: relative;
+    top: 25%;
+    transform: translate(0%, -50%);
+}
+
+.main-bg-color {
+    background-image: linear-gradient(to right, #f0be46 , #f8b003);
+}
+
+.single-counter {
+  display: inline-block;
+  position: relative;
+  width: 105px;
+  padding: 18px 10px 10px;
+
+  span {
+    display: block;
+    text-align: center;
+  }
+
+  .timer {
+    font-size: 3rem;
+  }
+}
+
+.chat-card-log {
+  height: 240px;
+}
+
+
+// ======================================================================================
+// Video.js
+// ======================================================================================
+.vjs-poster {
+  background-size: cover !important;
+  width: 100% !important;
+}
+
+
+// ======================================================================================
+// Spinner
+// ======================================================================================
+
+// .spinner {
+//   animation: spin 1.5s linear infinite;
+// }
+
+/*! rtl:begin:ignore */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*! rtl:end:ignore */
+
+
+// ======================================================================================
+// Feather - Font Icon
+// ======================================================================================
+
+i.feather {
+  font-weight: 100;
+}
+
+.feather.feather-menu {
+  z-index: 9;
+}
+
+// ======================================================================================
+// Perfect Scrollbar
+// ======================================================================================
+
+.scroll-area {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-mask {
+    position: fixed;
+    z-index: 53000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+  }
+
+  .modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .modal-container {
+    width: 450px;
+    margin: 0px auto;
+    padding: 30px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .modal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+  }
+
+  .modal-body {
+    margin: 20px 0;
+  }
+
+  .modal-default-button {
+    float: right;
+  }
+
+  /*
+   * The following styles are auto-applied to elements with
+   * transition="modal" when their visibility is toggled
+   * by Vue.js.
+   *
+   * You can easily play with the modal transition by editing
+   * these styles.
+   */
+
+  .modal-enter {
+    opacity: 0;
+  }
+
+  .modal-leave-active {
+    opacity: 0;
+  }
+
+  .modal-enter .modal-container,
+  .modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .step-active {
+    background-image: url("../images/pages/active_step.png");
+    width: 125px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.step {
+    background-image: url("..//images/pages/normal_step.png");
+    width: 125px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
