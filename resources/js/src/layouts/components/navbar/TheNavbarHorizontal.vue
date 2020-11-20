@@ -14,20 +14,12 @@
   <div class="vx-navbar-wrapper navbar-full p-0">
     <vs-navbar class="navbar-custom navbar-skelton" :class="navbarClasses"  :style="navbarStyle" :color="navbarColor">
         <div class="vx-row no-gutter items-center" style="width:100%;">
-            <div class="vx-col sm:w-1/4 md:w-1/4 lg:w-1/4">
+            <div class="vx-col sm:w-1/2 md:w-1/2 lg:w-1/2">
                 <router-link tag="div" to="/" class="vx-logo cursor-pointer mr-auto">
-                    <img src="@assets/images/pages/logo-white.png" alt="logo" style="height:1.5rem;">
+                    <img src="@assets/images/pages/LOGO - BRANCA.png" alt="logo" style="height:2.6rem;margin-left:20px;">
                 </router-link>
             </div>
-            <div class="vx-col sm:w-1/2 md:w-1/2 lg:w-1/2">
-                <vs-input
-                    icon="search"
-                    icon-after="true"
-                    placeholder="Pesquise leads, negócios e empresas"
-                    style="min-width:300px;"
-                    class="mx-auto"/>
-            </div>
-            <div class="vx-col sm:w-1/4 md:w-1/4 lg:w-1/4" style="float: right !important;">
+            <div class="vx-col sm:w-1/2 md:w-1/2 lg:w-1/2" style="float: right !important;">
                 <profile-drop-down />
             </div>
         </div>

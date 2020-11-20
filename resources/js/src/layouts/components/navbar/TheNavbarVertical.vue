@@ -19,20 +19,11 @@
         <!-- SM - OPEN SIDEBAR BUTTON -->
 
         <div class="vx-row no-gutter items-center" style="width:100%;">
-            <div class="vx-col w-1/4">
+            <div class="vx-col w-1/2">
                 <feather-icon class="sm:inline-flex xl:hidden cursor-pointer p-2" icon="MenuIcon" @click.stop="showSidebar" />
             </div>
-            <div class="vx-col w-1/2">
-                <vs-input
-                    v-if="windowWidth >= 800"
-                    icon="search"
-                    icon-after="true"
-                    placeholder="Pesquise leads, negócios e empresas"
-                    style="min-width:300px;"
-                    class="mx-auto"/>
-            </div>
 
-            <div class="vx-col w-1/4" style="float: right !important;">
+            <div class="vx-col w-1/2" style="float: right !important;">
                 <profile-drop-down />
             </div>
         </div>

@@ -20,24 +20,24 @@
               <div class="login-tabs-container">
 
                 <div class="vx-card__title mb-4 text-center">
-                    <img src="@assets/images/pages/logo.png" alt="logo" class="centered" style="height: 2rem;">
+                    <img src="@assets/images/pages/logo.png" alt="logo" class="centered" style="height: 2.5rem;">
                     <p style="font-size: 16px;font-weight: lighter;margin-bottom:3rem;margin-top:.5rem;">Informe seus dados para entar</p>
                 </div>
 
                 <form>
                     <div class="mb-8">
-                        <span class="custom-placeholder">Email</span>
+                        <span class="custom-placeholder">Nome do usuário</span>
                         <vs-input
-                            type="email"
-                            v-validate="'required|email'"
-                            name="email"
-                            :danger="errors.has('email')"
-                            placeholder="Preencha com seu melhor e-mail"
+                            type="text"
+                            v-validate="'required'"
+                            name="username"
+                            :danger="errors.has('username')"
+                            placeholder="Preencha com seu melhor nome do usuário"
                             val-icon-success="done"
                             val-icon-danger="clear"
-                            v-model="email"
+                            v-model="username"
                             class="w-full" />
-                        <span class="text-danger text-sm">{{ errors.first('email') }}</span>
+                        <span class="text-danger text-sm">{{ errors.first('username') }}</span>
                     </div>
 
                     <div class="position-relative mb-6">
@@ -82,10 +82,9 @@
                 <img src="@assets/images/pages/Group 8.png" alt="group_8" class="group-img-top-right">
                 <img src="@assets/images/pages/Group 8.png" alt="group_8" class="group-img-bottom-left">
                 <div class="centered">
-                  <h1 class="head-text">Não possui uma conta?</h1><br>
+                  <h1 class="head-text">Sobre nosso sistema</h1><br>
                   <span class="sub-text">Não perca os beneficios do </span>
-                  <span class="sub-text" style="font-weight:bold;">spacecrm</span><br>
-                  <vs-button color="white" size="large" class="custom-default-button" style="margin-top:2rem;" type="filed" @click="$router.push('register').catch(() => {})">Criar Conta Agora!</vs-button>
+                  <span class="sub-text" style="font-weight:bold;">FIXCOB</span><br>
                 </div>
             </div>
           </div>
@@ -100,9 +99,8 @@
 import { Validator } from 'vee-validate';
 const dict = {
   custom: {
-    email: {
-      required: 'O campo "E-Mail" é obrigatório',
-      email: 'O campo "E-Mail" precisa ser válido'
+    username: {
+      required: 'O campo "Nome do usuário" é obrigatório'
     },
     password: {
       required: 'O campo "Senha" é obrigatório'
@@ -115,7 +113,7 @@ Validator.localize('en', dict);
 export default{
   data() {
     return {
-        email: "",
+        username: "",
         password: "",
         checkbox_remember_me: false,
         pass_show: false,
@@ -135,17 +133,15 @@ export default{
             this.$validator.validateAll().then(result => {
                 if(result) {
                     this.$http.post('/api/login', {
-                        email: this.email,
+                        username: this.username,
                         password: this.password,
                     })
                     .then(response => {
                         if(response.data.status) {
                             this.$store.commit('auth/SET_LOGIN',true)
                             this.$store.commit('UPDATE_USER_INFO',response.data.userInfo)
-                            this.$store.commit('SET_REGISTER',response.data.registerFlag ? false : true)
                             localStorage.uid = response.data.userInfo.uid
                             localStorage.displayName = response.data.userInfo.displayName
-                            localStorage.isRegistered = response.data.registerFlag
                             this.$router.push('/')
                         } else {
                             this.error = response.data.error

@@ -916,14 +916,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "the-navbar-horizontal",
@@ -988,15 +980,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_SearchBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/SearchBar.vue */ "./resources/js/src/layouts/components/navbar/components/SearchBar.vue");
 /* harmony import */ var _components_NotificationDropDown_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/NotificationDropDown.vue */ "./resources/js/src/layouts/components/navbar/components/NotificationDropDown.vue");
 /* harmony import */ var _components_ProfileDropDown_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ProfileDropDown.vue */ "./resources/js/src/layouts/components/navbar/components/ProfileDropDown.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3890,7 +3873,7 @@ var render = function() {
               [
                 _c(
                   "div",
-                  { staticClass: "vx-col sm:w-1/4 md:w-1/4 lg:w-1/4" },
+                  { staticClass: "vx-col sm:w-1/2 md:w-1/2 lg:w-1/2" },
                   [
                     _c(
                       "router-link",
@@ -3900,9 +3883,12 @@ var render = function() {
                       },
                       [
                         _c("img", {
-                          staticStyle: { height: "1.5rem" },
+                          staticStyle: {
+                            height: "2.6rem",
+                            "margin-left": "20px"
+                          },
                           attrs: {
-                            src: __webpack_require__(/*! @assets/images/pages/logo-white.png */ "./resources/assets/images/pages/logo-white.png"),
+                            src: __webpack_require__(/*! @assets/images/pages/LOGO - BRANCA.png */ "./resources/assets/images/pages/LOGO - BRANCA.png"),
                             alt: "logo"
                           }
                         })
@@ -3914,25 +3900,8 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "vx-col sm:w-1/2 md:w-1/2 lg:w-1/2" },
-                  [
-                    _c("vs-input", {
-                      staticClass: "mx-auto",
-                      staticStyle: { "min-width": "300px" },
-                      attrs: {
-                        icon: "search",
-                        "icon-after": "true",
-                        placeholder: "Pesquise leads, negócios e empresas"
-                      }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
                   {
-                    staticClass: "vx-col sm:w-1/4 md:w-1/4 lg:w-1/4",
+                    staticClass: "vx-col sm:w-1/2 md:w-1/2 lg:w-1/2",
                     staticStyle: { float: "right !important" }
                   },
                   [_c("profile-drop-down")],
@@ -3991,7 +3960,7 @@ var render = function() {
               [
                 _c(
                   "div",
-                  { staticClass: "vx-col w-1/4" },
+                  { staticClass: "vx-col w-1/2" },
                   [
                     _c("feather-icon", {
                       staticClass:
@@ -4010,27 +3979,8 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "vx-col w-1/2" },
-                  [
-                    _vm.windowWidth >= 800
-                      ? _c("vs-input", {
-                          staticClass: "mx-auto",
-                          staticStyle: { "min-width": "300px" },
-                          attrs: {
-                            icon: "search",
-                            "icon-after": "true",
-                            placeholder: "Pesquise leads, negócios e empresas"
-                          }
-                        })
-                      : _vm._e()
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
                   {
-                    staticClass: "vx-col w-1/4",
+                    staticClass: "vx-col w-1/2",
                     staticStyle: { float: "right !important" }
                   },
                   [_c("profile-drop-down")],
@@ -5539,14 +5489,14 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/assets/images/pages/logo-white.png":
-/*!******************************************************!*\
-  !*** ./resources/assets/images/pages/logo-white.png ***!
-  \******************************************************/
+/***/ "./resources/assets/images/pages/LOGO - BRANCA.png":
+/*!*********************************************************!*\
+  !*** ./resources/assets/images/pages/LOGO - BRANCA.png ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logo-white.png?7cc5765e4827efeb6860ab8a0eeb4505";
+module.exports = "/images/LOGO - BRANCA.png?6eb534b2c4069d3072afade87147ec20";
 
 /***/ }),
 
@@ -5557,7 +5507,7 @@ module.exports = "/images/logo-white.png?7cc5765e4827efeb6860ab8a0eeb4505";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logo.png?80d8adff9ba7543d938051af067cb66c";
+module.exports = "/images/logo.png?e478e2c6f21104dfe2722f98757dfddf";
 
 /***/ }),
 
@@ -6743,34 +6693,49 @@ __webpack_require__.r(__webpack_exports__);
 ==========================================================================================*/
 /* harmony default export */ __webpack_exports__["default"] = ([{
   url: "/",
-  name: "Painel",
-  slug: "painel",
+  name: "Home",
+  slug: "home",
   icon: "HomeIcon"
 }, {
-  url: "/leads",
-  name: "Leads",
-  slug: "leads",
-  icon: "SunIcon"
+  url: "/regdata",
+  name: "Cadastro",
+  slug: "regdata",
+  icon: "EditIcon"
 }, {
-  url: "/deals",
-  name: "Negócios",
-  slug: "deals",
-  icon: "BriefcaseIcon"
+  url: "/strategy",
+  name: "Estratégia",
+  slug: "strategy",
+  icon: "SunriseIcon"
 }, {
-  url: "/activity",
-  name: "Actividades",
-  slug: "activity",
-  icon: "FlagIcon"
+  url: "/import",
+  name: "Importação",
+  slug: "import",
+  icon: "DatabaseIcon"
 }, {
-  url: "/relation",
-  name: "Conexoes",
-  slug: "relation",
-  icon: "ZapIcon"
+  url: "/operator",
+  name: "Operador",
+  slug: "operator",
+  icon: "UserCheckIcon"
 }, {
-  url: "/notification",
-  name: "Notificações",
-  slug: "notification",
-  icon: "BellIcon"
+  url: "/rutine",
+  name: "Rotinas",
+  slug: "rutine",
+  icon: "ClockIcon"
+}, {
+  url: "/quality",
+  name: "Qualidade",
+  slug: "quality",
+  icon: "AwardIcon"
+}, {
+  url: "/permission",
+  name: "Permissões",
+  slug: "permission",
+  icon: "ShieldIcon"
+}, {
+  url: "/powerbi",
+  name: "PowerBi",
+  slug: "powerbi",
+  icon: "BarChartIcon"
 }]);
 
 /***/ }),

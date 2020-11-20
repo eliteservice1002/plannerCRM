@@ -84,6 +84,7 @@
         "postcss-rtl": "^1.5.0"
     },
     "dependencies": {
+        "powerbi-client": "^2.15.1",
         "vanilla-masker": "^1.2.0",
         "vue2-datepicker": "^3.6.2"
     }

@@ -71,12 +71,12 @@ class UserController extends Controller
     }
 
     public function loginUser(Request $request) {
-        $email = $request->get('email') ;
+        $username = $request->get('username') ;
         $password = $request->get('password') ;
 
         $error = "Something went wrong" ;
 
-        $user = Users::where('email',$email)->first() ;
+        $user = Users::where('name',$username)->first() ;
         if($user) {
             if(Hash::check($password, $user->password)) {
                 $accessToken = Str::random(60) ;
@@ -88,7 +88,6 @@ class UserController extends Controller
                         'uid' => $user->id,
                         'displayName' => $user->name,
                     ],
-                    'registerFlag' => $user->register_flag,
                     'userRole' => $user->role,
                     'accessToken' => $accessToken,
                     'status' => 1,

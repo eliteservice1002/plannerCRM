@@ -38,9 +38,9 @@ const router = new Router({
                     component: () => import('./views/Home.vue')
                 },
                 {
-                    path: '/leads',
-                    name: 'leads',
-                    component: () => import('./views/pages/lead/Leads.vue')
+                    path: '/powerbi',
+                    name: 'pwerbi',
+                    component: () => import('./views/pages/powerbi/PowerBI.vue')
                 },
                 {
                     path: '/deals',

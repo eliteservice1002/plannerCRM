@@ -106,13 +106,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 var dict = {
   custom: {
-    email: {
-      required: 'O campo "E-Mail" é obrigatório',
-      email: 'O campo "E-Mail" precisa ser válido'
+    username: {
+      required: 'O campo "Nome do usuário" é obrigatório'
     },
     password: {
       required: 'O campo "Senha" é obrigatório'
@@ -123,7 +121,7 @@ vee_validate__WEBPACK_IMPORTED_MODULE_0__["Validator"].localize('en', dict);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      email: "",
+      username: "",
       password: "",
       checkbox_remember_me: false,
       pass_show: false,
@@ -147,7 +145,7 @@ vee_validate__WEBPACK_IMPORTED_MODULE_0__["Validator"].localize('en', dict);
       this.$validator.validateAll().then(function (result) {
         if (result) {
           _this.$http.post('/api/login', {
-            email: _this.email,
+            username: _this.username,
             password: _this.password
           }).then(function (response) {
             if (response.data.status) {
@@ -155,11 +153,8 @@ vee_validate__WEBPACK_IMPORTED_MODULE_0__["Validator"].localize('en', dict);
 
               _this.$store.commit('UPDATE_USER_INFO', response.data.userInfo);
 
-              _this.$store.commit('SET_REGISTER', response.data.registerFlag ? false : true);
-
               localStorage.uid = response.data.userInfo.uid;
               localStorage.displayName = response.data.userInfo.displayName;
-              localStorage.isRegistered = response.data.registerFlag;
 
               _this.$router.push('/');
             } else {
@@ -278,7 +273,7 @@ var render = function() {
                           [
                             _c("img", {
                               staticClass: "centered",
-                              staticStyle: { height: "2rem" },
+                              staticStyle: { height: "2.5rem" },
                               attrs: {
                                 src: __webpack_require__(/*! @assets/images/pages/logo.png */ "./resources/assets/images/pages/logo.png"),
                                 alt: "logo"
@@ -308,7 +303,7 @@ var render = function() {
                               _c(
                                 "span",
                                 { staticClass: "custom-placeholder" },
-                                [_vm._v("Email")]
+                                [_vm._v("Nome do usuário")]
                               ),
                               _vm._v(" "),
                               _c("vs-input", {
@@ -316,32 +311,33 @@ var render = function() {
                                   {
                                     name: "validate",
                                     rawName: "v-validate",
-                                    value: "required|email",
-                                    expression: "'required|email'"
+                                    value: "required",
+                                    expression: "'required'"
                                   }
                                 ],
                                 staticClass: "w-full",
                                 attrs: {
-                                  type: "email",
-                                  name: "email",
-                                  danger: _vm.errors.has("email"),
-                                  placeholder: "Preencha com seu melhor e-mail",
+                                  type: "text",
+                                  name: "username",
+                                  danger: _vm.errors.has("username"),
+                                  placeholder:
+                                    "Preencha com seu melhor nome do usuário",
                                   "val-icon-success": "done",
                                   "val-icon-danger": "clear"
                                 },
                                 model: {
-                                  value: _vm.email,
+                                  value: _vm.username,
                                   callback: function($$v) {
-                                    _vm.email = $$v
+                                    _vm.username = $$v
                                   },
-                                  expression: "email"
+                                  expression: "username"
                                 }
                               }),
                               _vm._v(" "),
                               _c(
                                 "span",
                                 { staticClass: "text-danger text-sm" },
-                                [_vm._v(_vm._s(_vm.errors.first("email")))]
+                                [_vm._v(_vm._s(_vm.errors.first("username")))]
                               )
                             ],
                             1
@@ -516,52 +512,26 @@ var render = function() {
                         }
                       }),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "centered" },
-                        [
-                          _c("h1", { staticClass: "head-text" }, [
-                            _vm._v("Não possui uma conta?")
-                          ]),
-                          _c("br"),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "sub-text" }, [
-                            _vm._v("Não perca os beneficios do ")
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              staticClass: "sub-text",
-                              staticStyle: { "font-weight": "bold" }
-                            },
-                            [_vm._v("spacecrm")]
-                          ),
-                          _c("br"),
-                          _vm._v(" "),
-                          _c(
-                            "vs-button",
-                            {
-                              staticClass: "custom-default-button",
-                              staticStyle: { "margin-top": "2rem" },
-                              attrs: {
-                                color: "white",
-                                size: "large",
-                                type: "filed"
-                              },
-                              on: {
-                                click: function($event) {
-                                  _vm.$router
-                                    .push("register")
-                                    .catch(function() {})
-                                }
-                              }
-                            },
-                            [_vm._v("Criar Conta Agora!")]
-                          )
-                        ],
-                        1
-                      )
+                      _c("div", { staticClass: "centered" }, [
+                        _c("h1", { staticClass: "head-text" }, [
+                          _vm._v("Sobre nosso sistema")
+                        ]),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "sub-text" }, [
+                          _vm._v("Não perca os beneficios do ")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "sub-text",
+                            staticStyle: { "font-weight": "bold" }
+                          },
+                          [_vm._v("FIXCOB")]
+                        ),
+                        _c("br")
+                      ])
                     ]
                   )
                 ])
@@ -599,7 +569,7 @@ module.exports = "/images/Group 8.png?3793978e1e50c12c48cfe02769d6c4c2";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logo.png?80d8adff9ba7543d938051af067cb66c";
+module.exports = "/images/logo.png?e478e2c6f21104dfe2722f98757dfddf";
 
 /***/ }),
 

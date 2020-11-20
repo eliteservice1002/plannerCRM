@@ -693,7 +693,7 @@ render._withStripped = true
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logo.png?80d8adff9ba7543d938051af067cb66c";
+module.exports = "/images/logo.png?e478e2c6f21104dfe2722f98757dfddf";
 
 /***/ }),
 

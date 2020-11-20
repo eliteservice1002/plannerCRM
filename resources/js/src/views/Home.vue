@@ -24,20 +24,13 @@
         <div class="vx-col md:w-full lg:w-3/4 mb-base">
             <img src="@assets/images/pages/main-back.png" alt="content-img" class="responsive card-img-top">
         </div>
-        <complete-profile v-if="getRegisterFlag"/>
     </div>
 </template>
 
 <script>
 
-import CompleteProfile  from "./modals/CompleteProfile"
-
 export default{
-    components: {
-        CompleteProfile
-    },
     computed: {
-        getRegisterFlag() { return this.$store.state.registerFlag},
         windowWidth(){ return this.$store.state.windowWidth }
     },
 }
