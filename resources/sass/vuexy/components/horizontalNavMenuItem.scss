@@ -2,7 +2,23 @@
 
 // If items is inside drop-down
 .menu-item {
+  .h-nav-group {
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    background: white;
+    color: #9a9a9a;
+  }
+
+  .h-nav-group-active {
+    background: rgba(0,0,0,0);
+    border-bottom: 3px solid rgba(var(--vs-primary), 0.6);
+
+    .group-header {
+      background: rgba(0,0,0,0);
+    }
+  }
   li {
+
     .h-nav-menu-item {
 
       a {
@@ -40,10 +56,9 @@
             color: #414141;
         }
         .nav-link {
-
-            .theme-dark & {
+          .theme-dark & {
             background: $theme-light-dark-bg;
-            }
+          }
         }
     }
 

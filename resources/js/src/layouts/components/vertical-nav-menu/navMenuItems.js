@@ -58,9 +58,25 @@ export default [
     icon: "ShieldIcon",
   },
   {
-    url: "/powerbi",
     name: "PowerBi",
     slug: "powerbi",
     icon: "BarChartIcon",
+    submenu: [
+      {
+        url: '/powerbi?id=1',
+        name: "Cobrança",
+        slug: "Cobrança",
+      },
+      {
+        url: null,
+        name: "Juridico",
+        slug: "Juridico",
+      },
+      {
+        url: '/powerbi?id=3',
+        name: "Vivo",
+        slug: "Vivo",
+      },
+    ]
   },
 ]

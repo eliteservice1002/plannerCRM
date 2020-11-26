@@ -8,12 +8,23 @@
 ========================================================================================== -->
 
 <template>
-    <iframe title="PowerBI" src="https://app.powerbi.com/view?r=eyJrIjoiZWViMDM1MTUtNjg4MS00YWU5LWI1OTgtZWE3ZDM1ZGYxNmZkIiwidCI6Ijc0ZTU3ZDhjLWU4NGQtNGRjZS04ZWMyLTdlMjMwZmUzYTc0NiJ9" :width='windowWidth' height="750"></iframe>
+    <iframe title="PowerBI" :src="url" :width='windowWidth' height="750"></iframe>
 </template>
 
 <script>
 
 export default {
+    data() {
+      return {
+          url: '',
+      }
+    },
+    mounted() {
+      if(this.$route.query.id === 1)
+        this.url = 'https://app.powerbi.com/view?r=eyJrIjoiNmU5N2IxZDItZDY5MS00YjRkLThiYmItNWVlZDQ2MTk3YTFiIiwidCI6Ijc0ZTU3ZDhjLWU4NGQtNGRjZS04ZWMyLTdlMjMwZmUzYTc0NiJ9'
+      else if(this.$route.query.id === 3)
+        this.url = 'https://app.powerbi.com/view?r=eyJrIjoiZWViMDM1MTUtNjg4MS00YWU5LWI1OTgtZWE3ZDM1ZGYxNmZkIiwidCI6Ijc0ZTU3ZDhjLWU4NGQtNGRjZS04ZWMyLTdlMjMwZmUzYTc0NiJ9'
+    },
     computed: {
         windowWidth(){ return this.$store.state.windowWidth-56 }
     },

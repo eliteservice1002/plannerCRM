@@ -45,15 +45,15 @@ export default {
   },
   computed: {
     navbarColor() {
-      let color = "linear-gradient(to right, #f0be46 , #f8b003)"
-      if (this.navbarType === "sticky") color = "linear-gradient(to right, #f0be46 , #f8b003)"
+      let color = "linear-gradient(to right, #142144 , #1A2144)"
+      if (this.navbarType === "sticky") color = "linear-gradient(to right, #142144 , #1A2144)"
       else if (this.navbarType === 'static') {
         if (this.scrollY < 50) {
-          color = "linear-gradient(to right, #f0be46 , #f8b003)"
+          color = "linear-gradient(to right, #142144 , #1A2144)"
         }
       }
 
-      this.isThemedark === "dark" ? color === "linear-gradient(to right, #f0be46 , #f8b003)" ? color = "#10163a" : color = "#262c49" : null
+      this.isThemedark === "dark" ? color === "linear-gradient(to right, #142144 , #1A2144)" ? color = "#10163a" : color = "#262c49" : null
 
       return color
     },
