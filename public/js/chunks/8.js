@@ -29,7 +29,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    if (this.$route.query.id === 1) this.url = 'https://app.powerbi.com/view?r=eyJrIjoiNmU5N2IxZDItZDY5MS00YjRkLThiYmItNWVlZDQ2MTk3YTFiIiwidCI6Ijc0ZTU3ZDhjLWU4NGQtNGRjZS04ZWMyLTdlMjMwZmUzYTc0NiJ9';else if (this.$route.query.id === 3) this.url = 'https://app.powerbi.com/view?r=eyJrIjoiZWViMDM1MTUtNjg4MS00YWU5LWI1OTgtZWE3ZDM1ZGYxNmZkIiwidCI6Ijc0ZTU3ZDhjLWU4NGQtNGRjZS04ZWMyLTdlMjMwZmUzYTc0NiJ9';
+    if (this.$route.query.id == 1) this.url = 'https://app.powerbi.com/view?r=eyJrIjoiNmU5N2IxZDItZDY5MS00YjRkLThiYmItNWVlZDQ2MTk3YTFiIiwidCI6Ijc0ZTU3ZDhjLWU4NGQtNGRjZS04ZWMyLTdlMjMwZmUzYTc0NiJ9';else if (this.$route.query.id == 3) this.url = 'https://app.powerbi.com/view?r=eyJrIjoiZWViMDM1MTUtNjg4MS00YWU5LWI1OTgtZWE3ZDM1ZGYxNmZkIiwidCI6Ijc0ZTU3ZDhjLWU4NGQtNGRjZS04ZWMyLTdlMjMwZmUzYTc0NiJ9';
   },
   computed: {
     windowWidth: function windowWidth() {
